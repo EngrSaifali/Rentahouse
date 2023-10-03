@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/21f1011251.js" crossorigin="anonymous"></script>
+    <title>Register Now! - Travel Earth</title>
+    <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("sLugLlMyllB9ekmUp");
+        })();
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <div id="preloader"></div>
+
+    <nav id="navBar" class="navbar-white">
+        <a href="index.html" target="_blank">
+            <img src="Images/logo 3 fixed.png" class="logo">
+        </a>
+        <ul class="nav-links">
+            <li ><a href="#" class="active">Popular Places</a></li>
+            <li ><a href="listing.html" target="_blank">Online Packages</a></li>
+            <li ><a href="#">Travel Outside</a></li>
+        </ul>
+        <a href="register.html" class="register-btn">Register Now!</a>
+        <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+    </nav>
+
+
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/gameshub.blogspot" target="_blank"><img src="Images/fb.png"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="Images/tw.png"></a>
+                <a href="https://www.google.com" target="_blank"><img src="Images/gp.png"></a>
+            </div>
+
+            <form id="login" class="input-group">
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="text" class="input-field" placeholder="Full Name" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
+            <div id="error-message" class="hidden">Please fill out the entire form.</div>
+            <div id="success-message" class="hidden">Thank you for your response.</div>            
+            
+            <form id="signup" class="input-group">
+                <input type="text" class="input-field" placeholder="Username" required>
+                <input type="email" class="input-field" placeholder="Email address or phone number" required>
+                <input type="text" class="input-field" placeholder="New Password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms and comditions</span>
+                <button type="submit" class="submit-btn">Sign Up</button>    
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("signup");
+        var z = document.getElementById("btn");
+
+        function signup(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+    </script>
+
+    <script>
+        var navBar = document.getElementById("navBar");
+    
+        function togglebtn() {
+            navBar.classList.toggle("hidemenu")
+        }
+    </script>
+
+<script>
+
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+    })
+    
+</script>
+
+</body>
+
+</html>
